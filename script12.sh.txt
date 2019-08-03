@@ -1,0 +1,16 @@
+#!/bin/bash
+yesno(){
+if [ $ch = 'y' ]
+then
+return 0
+elsif [ $ch = 'n' ]
+return 1
+else
+echo "invalid choice"
+fi
+}
+echo $1
+echo "enter y/n"
+read ch
+c=yesno
+echo $?

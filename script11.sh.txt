@@ -1,0 +1,50 @@
+#!/bin/bash
+echo "choose the operation"
+echo "1)creating a file"
+echo "2)creating a directory"
+echo "3)copying a file"
+echo "4)moving a file"
+echo "enter the choice"
+read ch
+case $ch in
+1)echo "enter the file name"
+read filename
+if [ -e $filename ]
+then
+echo "file already exists"
+else
+echo `touch $filename`
+fi;;
+2)echo "enter the directory name"
+read dirname
+if [ -e $dirname ]
+then
+echo "directory already exists"
+else
+echo `mkdir $dirname`
+fi ;;
+3)echo "enter the source file"
+read csfile
+echo enter the destination path and filename
+read cdfile
+if [ -e $csfile ]
+then
+if [ -r $csfile ]
+then
+echo `cp $csfile $cdfile`
+fi
+else
+echo "source not found"
+fi;;
+4)echo "enter the source file"
+read msfile
+echo "enter the destination file"
+read mdfile
+if [ -e $msfile]
+then
+echo `mv $msfile $mdfile`
+fi
+;;
+*)echo "invalid choice"
+esac
+

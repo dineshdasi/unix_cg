@@ -1,0 +1,2 @@
+#!/bin/bash
+echo `find $HOME -mtime -1 -print`

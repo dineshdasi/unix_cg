@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "enter the first name"
+read fname
+echo "enter the last name"
+read lname
+echo "$fname $lname"

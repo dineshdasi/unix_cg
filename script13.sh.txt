@@ -1,0 +1,9 @@
+#!/bin/bash
+list=`users`
+for user in $list
+do
+if [ $user = $1 -o $user = $2 -o $user = $3 -o $user = $4 ]
+then
+echo $user
+fi
+done

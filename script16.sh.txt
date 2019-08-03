@@ -1,0 +1,9 @@
+#!/bin/bash
+list=`ls`
+for file in $list
+do
+if [ -r $file ]
+then
+echo `ls -l $file`
+fi
+done
